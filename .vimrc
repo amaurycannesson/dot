@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline'  " Lean & mean status/tabline
 Plug 'kien/ctrlp.vim'           " Fuzzy file finder
 Plug 'airblade/vim-gitgutter'   " Show git diff in the gutter
 Plug 'valloric/youcompleteme'   " Auto completion
+Plug 'rust-lang/rust.vim'       " Rust support
 call plug#end()
 
 " Colors
