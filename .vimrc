@@ -3,6 +3,12 @@ set encoding=utf-8
 set nocompatible
 set hidden                      " Don't close buffers
 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 call plug#begin('~/.vim/plugged')
 Plug 'alvan/vim-closetag'       " Close tag
 Plug 'dracula/vim'              " Dracula theme
