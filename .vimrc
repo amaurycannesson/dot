@@ -2,7 +2,9 @@ let mapleader=","
 set encoding=utf-8
 set nocompatible
 set hidden                      " Don't close buffers
+set noswapfile                  " No swap files
 
+" Plug automatic installation
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -11,19 +13,24 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'alvan/vim-closetag'       " Close tag
-Plug 'dracula/vim'              " Dracula theme
+Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'jiangmiao/auto-pairs'     " Insert or delete brackets, parens, quotes in pair
 Plug 'scrooloose/nerdcommenter' " Comment functions
+Plug 'scrooloose/nerdtree'      " File explorer
 Plug 'vim-airline/vim-airline'  " Lean & mean status/tabline
 Plug 'kien/ctrlp.vim'           " Fuzzy file finder
 Plug 'airblade/vim-gitgutter'   " Show git diff in the gutter
 Plug 'valloric/youcompleteme'   " Auto completion
+Plug 'pangloss/vim-javascript'  " JS support
+Plug 'mxw/vim-jsx'              " JSX support
 Plug 'rust-lang/rust.vim'       " Rust support
 call plug#end()
 
 " Colors
-colorscheme dracula
 syntax on
+set background=dark
+let g:enable_bold_font = 1
+colorscheme hybrid_material
 
 " Spaces & Tabs
 set tabstop=4                   " number of visual spaces per TAB
@@ -45,6 +52,8 @@ set splitbelow                  " When horizontal split, open the buffer below
 set splitright                  " When vertical split, open the buffer on the right
 
 " Searching
+set ignorecase                  " lowercase searches are case insensitive
+set smartcase                   " search with one uppercase are case sensitive
 set incsearch                   " search as characters are entered
 set hlsearch                    " highlight matches
 " turn off search highlight
@@ -75,7 +84,7 @@ let g:NERDDefaultAlign = 'left'         " Align line-wise comment delimiters flu
 let g:NERDCommentEmptyLines = 1         " Allow commenting and inverting empty lines (useful when commenting a region)
 let g:NERDTrimTrailingWhitespace = 1    " Enable trimming of trailing whitespace when uncommenting
 
-
+noremap <leader>n :NERDTreeToggle<CR>
 
 
 
