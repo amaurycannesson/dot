@@ -13,29 +13,40 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'alvan/vim-closetag'       " Close tag
-Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'jiangmiao/auto-pairs'     " Insert or delete brackets, parens, quotes in pair
 Plug 'scrooloose/nerdcommenter' " Comment functions
 Plug 'scrooloose/nerdtree'      " File explorer
 Plug 'vim-airline/vim-airline'  " Lean & mean status/tabline
 Plug 'kien/ctrlp.vim'           " Fuzzy file finder
 Plug 'airblade/vim-gitgutter'   " Show git diff in the gutter
-Plug 'valloric/youcompleteme'   " Auto completion
 Plug 'pangloss/vim-javascript'  " JS support
 Plug 'mxw/vim-jsx'              " JSX support
 Plug 'rust-lang/rust.vim'       " Rust support
+Plug 'ryanoasis/vim-devicons'   " Icons for nerdtree
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'                 " Lint
 call plug#end()
 
-" Colors
+" Theme / Colors
 syntax on
 set background=dark
 let g:enable_bold_font = 1
-colorscheme hybrid_material
+let g:airline_theme='onedark'
+let g:palenight_terminal_italics=1
+colorscheme palenight
+
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 
 " Spaces & Tabs
 set tabstop=4                   " number of visual spaces per TAB
-set softtabstop=4               " number of spaces in tab when editing
+set softtabstop=0               " number of spaces in tab when editing
 set expandtab                   " tabs are spaces
+set shiftwidth=4
+set smarttab
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 
 " UI Config
@@ -72,20 +83,21 @@ set foldmethod=indent           " fold based on indent level
 nnoremap j gj
 nnoremap k gk
 " leader direction to change pane
-noremap <leader>l <C-w>l                                                                                                                                                                                      
+noremap <leader>l <C-w>l
 noremap <leader>h <C-w>h
 noremap <leader>j <C-w>j
 noremap <leader>k <C-w>k
 
 " NERD Commenter
 let g:NERDSpaceDelims = 1               " Add spaces after comment delimiters by default
-let g:NERDCompactSexyComs = 1           " Use compact syntax for prettified multi-line comments 
+let g:NERDCompactSexyComs = 1           " Use compact syntax for prettified multi-line comments
 let g:NERDDefaultAlign = 'left'         " Align line-wise comment delimiters flush left instead of following code indentation
 let g:NERDCommentEmptyLines = 1         " Allow commenting and inverting empty lines (useful when commenting a region)
 let g:NERDTrimTrailingWhitespace = 1    " Enable trimming of trailing whitespace when uncommenting
 
 noremap <leader>n :NERDTreeToggle<CR>
 
-
-
-
+" ALE
+let g:ale_linters = { 'javascript': ['eslint'] }
+let g:ale_fixers ={ '*': ['remove_trailing_lines', 'trim_whitespace'], 'javascript': ['eslint'] }
+let g:ale_fix_on_save = 1
