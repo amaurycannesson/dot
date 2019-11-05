@@ -26,6 +26,8 @@ Plug 'ryanoasis/vim-devicons'   " Icons for nerdtree
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'                 " Lint
+Plug 'posva/vim-vue'            " Syntax highlighter for Vue.js
+Plug 'ap/vim-css-color'         " Color name highlighter
 call plug#end()
 
 " Theme / Colors
