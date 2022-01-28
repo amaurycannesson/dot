@@ -1,0 +1,17 @@
+*
+
+!.gitignore
+!.vimrc
+!.zshrc
+!.gitconfig
+!.skhdrc
+
+!.config/
+!.config/*
+!.config/alacritty/
+!.config/alacritty/*
+
+!.vscode/
+!.vscode/*
+
+!Brewfile

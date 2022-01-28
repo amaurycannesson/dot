@@ -1,0 +1,7 @@
+cmd - return : open -n -a alacritty
+
+cmd + shift - return : open -n -a firefox
+
+.blacklist [
+    "alacritty"
+]
