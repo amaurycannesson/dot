@@ -29,8 +29,8 @@ font:
   size: 12
 
 key_bindings:
-  - { key: L,        mods: Alt,     chars: "|"                        }
-  - { key: LBracket,    mods: Alt|Shift,      chars: "\x7B"              }
-  - { key: RBracket,    mods: Alt|Shift,      chars: "\x7D"              }
-  - { key: LBracket,    mods: Alt,            chars: "\x5B"              }
-  - { key: RBracket,    mods: Alt,            chars: "\x5D"              }
+  - { key: L,             mods: Alt|Shift,      chars: "|"      }
+  - { key: LBracket,      mods: Alt|Shift,      chars: "["      }
+  - { key: RBracket,      mods: Alt|Shift,      chars: "]"      }
+  - { key: LBracket,      mods: Alt,            chars: "{"      }
+  - { key: RBracket,      mods: Alt,            chars: "}"      }
