@@ -1,114 +1,145 @@
 {
-    "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Dracula",
-    "workbench.startupEditor": "none",
-    "vim.leader": ",",
-    "vim.smartRelativeLine": true,
-    "vim.hlsearch": true,
-    "vim.ignorecase": false,
-    "vim.normalModeKeyBindings": [
-        {
-            "before": [
-                "<leader>",
-                "h"
-            ],
-            "commands": [
-                "workbench.action.navigateLeft"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "l"
-            ],
-            "commands": [
-                "workbench.action.navigateRight"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "k"
-            ],
-            "commands": [
-                "workbench.action.navigateUp"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "j"
-            ],
-            "commands": [
-                "workbench.action.navigateDown"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "w"
-            ],
-            "after": [
-                ":",
-                "w",
-                "<CR>"
-            ]
-        }
-    ],
-    "vim.visualModeKeyBindings": [
-        {
-            "before": [
-                "<leader>",
-                "c"
-            ],
-            "commands": [
-                "editor.action.commentLine"
-            ],
-            "when": "editorTextFocus && !editorReadonly"
-        }
-    ],
-    "workbench.iconTheme": "material-icon-theme",
-    "python.pythonPath": "${env:VIRTUAL_ENV}/bin",
-    "[python]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        },
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "Dracula",
+  "workbench.startupEditor": "none",
+  "vim.leader": ",",
+  "vim.smartRelativeLine": true,
+  "vim.hlsearch": true,
+  "vim.ignorecase": false,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.navigateLeft"]
     },
-    "python.linting.pylintEnabled": true,
-    "python.linting.mypyEnabled": true,
-    "python.linting.enabled": true,
-    "python.formatting.provider": "black",
-    "python.formatting.blackArgs": [
-        "--line-length",
-        "100"
-    ],
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true,
-    "dart.flutterSdkPath": ".fvm/flutter_sdk",
-    "search.exclude": {
-        "**/.fvm": true,
-        "**/.direnv": true,
-        "**/.mypy_cache": true
+    {
+      "before": ["<leader>", "l"],
+      "commands": ["workbench.action.navigateRight"]
     },
-    "files.watcherExclude": {
-        "**/.fvm": true
+    {
+      "before": ["<leader>", "k"],
+      "commands": ["workbench.action.navigateUp"]
     },
-    "[terraform]": {
-        "editor.defaultFormatter": "hashicorp.terraform",
-        "editor.formatOnSave": true,
-        "editor.formatOnSaveMode": "file"
+    {
+      "before": ["<leader>", "j"],
+      "commands": ["workbench.action.navigateDown"]
     },
-    "[terraform-vars]": {
-        "editor.defaultFormatter": "hashicorp.terraform",
-        "editor.formatOnSave": true,
-        "editor.formatOnSaveMode": "file"
-    },
-    "dart.lineLength": 120,
-    "[dart]": {
-        "editor.formatOnSave": true,
-        "editor.rulers": [120],
-        "editor.tabSize": 2,
-        "editor.insertSpaces": true,
+    {
+      "before": ["<leader>", "w"],
+      "after": [":", "w", "<CR>"]
     }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["editor.action.commentLine"],
+      "when": "editorTextFocus && !editorReadonly"
+    }
+  ],
+  "workbench.iconTheme": "material-icon-theme",
+  "python.pythonPath": "${env:VIRTUAL_ENV}/bin",
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "python.linting.pylintEnabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.linting.enabled": true,
+  "python.linting.pylintArgs": [
+    "--disable=C0114",
+    "--disable=C0115",
+    "--disable=C0116"
+  ],
+  "python.formatting.provider": "black",
+  "python.formatting.blackArgs": ["--line-length", "100"],
+  "python.sortImports.args": ["--src=${workspaceFolder}"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["-vv"],
+  "dart.flutterSdkPath": ".fvm/flutter_sdk",
+  "search.exclude": {
+    "**/.fvm": true,
+    "**/.direnv": true,
+    "**/.mypy_cache": true
+  },
+  "files.watcherExclude": {
+    "**/.fvm": true
+  },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file"
+  },
+  "[terraform-vars]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file"
+  },
+  "dart.lineLength": 120,
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.rulers": [120],
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "eslint.validate": ["javascript", "typescript", "javascriptreact", "vue"],
+  "eslint.alwaysShowStatus": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      // "source.organizeImports": true,
+      "source.fixAll": true
+      // "source.sortMembers": true,
+    }
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      // "source.organizeImports": true,
+      "source.fixAll": true
+      // "source.sortMembers": true,
+    }
+  },
+  "javascript.inlayHints.parameterNames.enabled": "none",
+  "javascript.inlayHints.variableTypes.enabled": false,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": false,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": false,
+  "javascript.referencesCodeLens.enabled": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      // "source.organizeImports": true,
+      "source.fixAll": true
+      // "source.sortMembers": true,
+    }
+  },
+  // "typescript.inlayHints.parameterNames.enabled": "all",
+  // "typescript.inlayHints.variableTypes.enabled": true,
+  // "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  // "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  // "typescript.referencesCodeLens.enabled": true,
+  // "typescript.implementationsCodeLens.enabled": true,
+  "[vue]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "volar.takeOverMode.enabled": false,
+  "dart.debugExternalPackageLibraries": false,
+  "dart.debugSdkLibraries": false,
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
