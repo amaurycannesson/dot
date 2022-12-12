@@ -37,3 +37,4 @@ key_bindings:
   - { key: RBracket,      mods: Alt|Shift,      chars: "]"      }
   - { key: LBracket,      mods: Alt,            chars: "{"      }
   - { key: RBracket,      mods: Alt,            chars: "}"      }
+  - { key: Return,        mods: Alt,            action: CreateNewWindow }
