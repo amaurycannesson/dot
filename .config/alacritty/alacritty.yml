@@ -14,7 +14,8 @@ window:
     x: 12
     y: 12
 
-window.opacity: 1
+window:
+  opacity: 0.8
 
 font:
   normal:
@@ -27,6 +28,8 @@ font:
     family: 'JetBrainsMono Nerd Font'
     style: Italic
   size: 12
+
+alt_send_esc: false
 
 key_bindings:
   - { key: L,             mods: Alt|Shift,      chars: "|"      }
