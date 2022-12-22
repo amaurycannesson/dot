@@ -1,0 +1,10 @@
+require "user.settings"
+require "user.keymaps"
+require "user.colorscheme"
+require "user.alpha"
+require "user.terminal"
+require "user.treesitter"
+require "user.plugins"
+require "user.formatters"
+require "user.nvimtree"
+
