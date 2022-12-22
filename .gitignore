@@ -8,8 +8,14 @@
 
 !.config/
 !.config/*
-!.config/alacritty/
-!.config/alacritty/*
+
+!.config/kitty/
+!.config/kitty/*
+
+!.config/lvim/
+!.config/lvim/*
+!.config/lvim/lua/user/
+!.config/lvim/lua/user/*
 
 !.vscode/
 !.vscode/*
