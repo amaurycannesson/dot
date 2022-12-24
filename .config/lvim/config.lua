@@ -6,5 +6,5 @@ require "user.terminal"
 require "user.treesitter"
 require "user.plugins"
 require "user.formatters"
+require "user.dap"
 require "user.nvimtree"
-
