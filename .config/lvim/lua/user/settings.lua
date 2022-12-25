@@ -7,3 +7,5 @@ lvim.transparent_window = true
 lvim.leader = ","
 
 lvim.format_on_save = true
+
+lvim.builtin.project.active = false

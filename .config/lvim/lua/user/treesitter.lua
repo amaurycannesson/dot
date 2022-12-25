@@ -1,15 +1,16 @@
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
-  "c",
+  "css",
+  "dart",
+  "hcl",
   "javascript",
   "json",
   "lua",
   "python",
-  "typescript",
-  "tsx",
-  "css",
   "rust",
-  "java",
+  "sql",
+  "tsx",
+  "typescript",
   "yaml",
 }
 lvim.builtin.treesitter.ignore_install = { "haskell" }
