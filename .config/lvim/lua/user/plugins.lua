@@ -5,6 +5,7 @@ lvim.plugins = {
     "mfussenegger/nvim-dap-python",
     "antoinemadec/FixCursorHold.nvim",
     "nvim-neotest/neotest",
-    "nvim-neotest/neotest-python"
+    "nvim-neotest/neotest-python",
+    "akinsho/flutter-tools.nvim",
   },
 }
