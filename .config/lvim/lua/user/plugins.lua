@@ -7,5 +7,6 @@ lvim.plugins = {
     "nvim-neotest/neotest",
     "nvim-neotest/neotest-python",
     "akinsho/flutter-tools.nvim",
+    { "vuki656/package-info.nvim", requires = "MunifTanjim/nui.nvim" },
   },
 }
