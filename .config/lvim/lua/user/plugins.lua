@@ -6,6 +6,7 @@ lvim.plugins = {
     "antoinemadec/FixCursorHold.nvim",
     "nvim-neotest/neotest",
     "nvim-neotest/neotest-python",
+    "marilari88/neotest-vitest",
     "akinsho/flutter-tools.nvim",
     { "vuki656/package-info.nvim", requires = "MunifTanjim/nui.nvim" },
   },
