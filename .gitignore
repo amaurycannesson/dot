@@ -12,12 +12,20 @@
 !.config/kitty/
 !.config/kitty/*
 
-!.config/lvim/
-!.config/lvim/*
-!.config/lvim/lua/user/
-!.config/lvim/lua/user/*
+!.config/eza/
+!.config/eza/*
+
+!.config/nvim/
+!.config/nvim/*
+!.config/nvim/lsp
+!.config/nvim/lsp/*
+!.config/nvim/lua
+!.config/nvim/lua/*
+!.config/nvim/lua/plugins
+!.config/nvim/lua/plugins/*
 
 !.vscode/
 !.vscode/*
+.vscode/argv.json
 
 !Brewfile

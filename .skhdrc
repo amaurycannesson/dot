@@ -1,7 +1,0 @@
-cmd - return : open -n -a kitty
-
-cmd + shift - return : open -n -a firefox
-
-.blacklist [
-    "kitty"
-]

@@ -1,31 +1,44 @@
-autoload -Uz compinit
-for dump in ~/.zcompdump(N.mh+24); do
-  compinit
-done
-compinit -C
+export ZSH="$HOME/.oh-my-zsh"
 
-source $(brew --prefix)/share/antigen/antigen.zsh
+# ZSH_THEME="robbyrussell"
 
-antigen use oh-my-zsh
+zstyle ':omz:update' mode auto
+zstyle ':omz:update' frequency 14
 
-antigen bundle git
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-antigen theme dracula/zsh dracula
+HIST_STAMPS="yyyy-mm-dd"
+HISTSIZE=10000
+SAVEHIST=20000
 
-antigen apply
+plugins=(
+  git
+  zsh-autosuggestions     # Auto-suggest commands based on history
+  zsh-syntax-highlighting # Highlight commands for better readability
+  zsh-completions         # Better completion suggestions
+  aws
+)
 
-eval "$(pyenv init -)"
-eval "$(direnv hook zsh)"
+source $ZSH/oh-my-zsh.sh
+
 eval "$(starship init zsh)"
 
 export NVM_DIR="$HOME/.nvm"
-. $NVM_DIR/nvm.sh
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-alias f="fvm flutter"
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export PATH="$PATH":"$HOME/.pub-cache/bin"
+. "$HOME/.cargo/env"
 
-export PATH="/Users/amaury/.local/bin:$PATH"
+. "$HOME/.local/bin/env"
+
+eval "$(uv generate-shell-completion zsh)"
+
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+export EZA_CONFIG_DIR="$HOME/.config/eza"
+
+alias l="eza --icons --group-directories-first -a"
+alias ll="eza --icons --group-directories-first --no-permissions --no-user -la -T -L 1 --git"
