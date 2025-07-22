@@ -14,6 +14,11 @@
 
 !.config/eza/
 !.config/eza/*
+.config/eza/theme.yml
+
+!.config/lazygit/
+!.config/lazygit/*
+.config/lazygit/theme.yml
 
 !.config/nvim/
 !.config/nvim/*

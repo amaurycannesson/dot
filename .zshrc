@@ -40,5 +40,31 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 export EZA_CONFIG_DIR="$HOME/.config/eza"
 
+unset LS_COLORS
+
 alias l="eza --icons --group-directories-first -a"
 alias ll="eza --icons --group-directories-first --no-permissions --no-user -la -T -L 1 --git"
+
+alias n="nvim"
+
+export LG_CONFIG_FILE="$HOME/.config/lazygit/theme.yml"
+
+alias lg="lazygit"
+
+function set_theme() {
+  local system_theme=$(defaults read -globalDomain AppleInterfaceStyle 2>/dev/null || echo "Light")
+
+  if [[ "$system_theme" == "Dark" ]]; then
+    # Set dark theme
+    cp "$HOME/.config/eza/dark-theme.yml" "$HOME/.config/eza/theme.yml"
+    cp "$HOME/.config/lazygit/dark-theme.yml" "$HOME/.config/lazygit/theme.yml"
+    sed -i '' 's/^palette = "catppuccin_latte"/palette = "catppuccin_mocha"/' "$HOME/.config/starship.toml"
+    echo "Switched to dark theme"
+  else
+    # Set light theme
+    cp "$HOME/.config/eza/light-theme.yml" "$HOME/.config/eza/theme.yml"
+    cp "$HOME/.config/lazygit/light-theme.yml" "$HOME/.config/lazygit/theme.yml"
+    sed -i '' 's/^palette = "catppuccin_mocha"/palette = "catppuccin_latte"/' "$HOME/.config/starship.toml"
+    echo "Switched to light theme"
+  fi
+}
