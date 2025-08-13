@@ -15,6 +15,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.scrolloff = 8
 vim.o.signcolumn = "yes"
+vim.o.cursorline = true
 
 -- Window
 vim.o.splitright = true
@@ -22,7 +23,7 @@ vim.o.winborder = "rounded"
 
 -- Search settings
 vim.o.wrap = false
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 vim.o.incsearch = true
 vim.o.ignorecase = true
 vim.o.smartcase = true

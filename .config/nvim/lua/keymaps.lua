@@ -4,6 +4,9 @@ local oil = require("oil")
 local gitsigns = require("gitsigns")
 
 wk.add({
+  { "*",          "*N",                          desc = "Highlight word" },
+  { "<ESC><ESC>", ":noh<CR>",                    desc = "Clear highlighting" },
+
   { "<Tab>",      ":bnext<CR>",                  desc = "Next buffer" },
   { "<S-Tab>",    ":bprev<CR>",                  desc = "Previous buffer" },
 
