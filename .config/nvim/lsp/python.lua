@@ -8,7 +8,8 @@ return {
     "setup.cfg",
     "requirements.txt",
     "Pipfile",
-    "pyrightconfig.json"
+    "pyrightconfig.json",
+    ".git",
   },
   settings = {
     python = {
@@ -18,6 +19,8 @@ return {
         disableOrganizeImports = true,
         useLibraryCodeForTypes = true,
         typeCheckingMode = "standard",
+        autoImportCompletions = true,
+        indexing = true,
       },
     },
   },

@@ -7,7 +7,7 @@ return {
 
     telescope.setup({
       defaults = {
-        border = false,
+        border = true,
         preview = {
           hide_on_startup = false,
           treesitter = true,

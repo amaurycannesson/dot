@@ -32,7 +32,7 @@ wk.add({
   { "<leader>a",  "qa",                          desc = "Start macro recording" },
   { "<leader>A",  "@a",                          desc = "Play macro" },
 
-  { "<leader>q",  ":bd<CR>",                     desc = 'Close buffer' },
+  { "<leader>q",  ":bp|bd #<CR>",                desc = 'Close buffer' },
   { "<leader>Q",  ":q<CR>",                      desc = 'Close window' },
 
   { "<leader>l",  group = "LSP Actions" },
