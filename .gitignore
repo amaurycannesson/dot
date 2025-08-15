@@ -33,4 +33,7 @@
 !.vscode/*
 .vscode/argv.json
 
+!.claude/
+!.claude/settings.json
+
 !Brewfile

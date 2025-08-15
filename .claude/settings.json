@@ -1,0 +1,16 @@
+{
+  "includeCoAuthoredBy": false,
+  "hooks": {
+    "Notification":[
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.message' | kitten notify '✹ Claude Code' \"$(cat /dev/stdin)\""
+          }
+        ]
+      }
+    ]
+  }
+}
