@@ -51,6 +51,7 @@ vim.o.foldenable = false
 vim.lsp.enable({
   "lua",
   "typescript",
+  "astro",
   "rust",
   "python",
   "ruff",

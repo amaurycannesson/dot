@@ -12,6 +12,7 @@ return {
         "bash",
         "markdown",
         "markdown_inline",
+        "astro",
         "typescript",
         "tsx",
         "javascript",
@@ -50,4 +51,3 @@ return {
     })
   end,
 }
-
