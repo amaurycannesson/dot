@@ -6,10 +6,11 @@ return {
   config = function()
     require("conform").setup({
       formatters_by_ft = {
-        javascript = { "prettier" },
-        typescript = { "prettier" },
-        javascriptreact = { "prettier" },
-        typescriptreact = { "prettier" },
+        javascript = { "eslint_d", "prettier" },
+        typescript = { "eslint_d", "prettier" },
+        javascriptreact = { "eslint_d", "prettier" },
+        typescriptreact = { "eslint_d", "prettier" },
+        astro = { "eslint_d", "prettier" },
         css = { "prettier" },
         html = { "prettier" },
         json = { "prettier" },
@@ -24,6 +25,7 @@ return {
       },
       stop_after_first = false,
       format_on_save = {
+        lsp_fallback = true,
         lsp_format = "fallback",
         timeout_ms = 500,
       },
